@@ -8,19 +8,45 @@
   <link rel="stylesheet" href="css\style.css">
 
 </head>
-
+ 
 <body>
-  <div class="container">
-    <h1>BMI Calculator</h1>
-    <div class="input-container">
-      <label for="height">Height:</label>
-      <input type="number" id="height" placeholder="Height (cm)">
-    </div>
-    <div class="input-container">
-      <label for="weight">Weight:</label>
-      <input type="number" id="weight" placeholder="Weight (kg)">
-    </div>
-    <button onclick="calculateBMI()">Calculate</button>
-    <div id="result"></div>
-  </div> 
+    <header> 
+        <h1> Kalkulator BMI </h1>
+    </header>
+
+    <main>    
+     <p> Kalkulator BMI adalah alat yang digunakan untuk menghitung Body Mass Index (BMI) atau Indeks Massa Tubuh. <br> BMI adalah angka yang menunjukkan apakah berat badan seseorang termasuk dalam kategori sehat, kurang, atau berlebihan berdasarkan tinggi badannya.</p>
+        <form>
+            <dif>
+                <h3>Jenis Kelamin</h3>
+                <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki">
+                <label for="laki-laki">Laki-Laki</label>
+                <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan">
+                <label for="perempuan">Perempuan</label>
+            </dif>
+
+            <dif> 
+                <h3> Berat badan </h3>
+                <input type="number">
+            </dif>
+
+            <dif> 
+                <h3> Tinggi badan </h3>
+                <input type="number">
+            </dif>
+
+            <div>
+                <button>Hitung BMI</button>
+                <button> Reset </button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer> 
+
+    </footer> 
+
+</body>
 </html>
