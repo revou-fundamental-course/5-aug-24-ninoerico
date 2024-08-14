@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMI Calculator</title>
-  <link rel="stylesheet" href="css\style.css">
-
+  <link rel="stylesheet" href="css/style.css">
 </head>
  
 <body>
     <header> 
-        <h1> Kalkulator BMI </h1>
+        <h1>Kalkulator BMI</h1>
     </header>
 
     <main>    
-     <p> Kalkulator BMI adalah alat yang digunakan untuk menghitung Body Mass Index (BMI) atau Indeks Massa Tubuh. <br> BMI adalah angka yang menunjukkan apakah berat badan seseorang termasuk dalam kategori sehat, kurang, atau berlebihan berdasarkan tinggi badannya.</p>
+        <p>Kalkulator BMI adalah alat yang digunakan untuk menghitung Body Mass Index (BMI) atau Indeks Massa Tubuh. <br>
+        BMI adalah angka yang menunjukkan apakah berat badan seseorang termasuk dalam kategori sehat, kurang, atau berlebihan berdasarkan tinggi badannya.</p>
         <form>
-            <dif>
+            <div>
                 <h3>Jenis Kelamin</h3>
                 <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki">
                 <label for="laki-laki">Laki-Laki</label>
                 <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan">
                 <label for="perempuan">Perempuan</label>
-            </dif>
-
-            <dif> 
-                <h3> Berat badan </h3>
-                <input type="number">
-            </dif>
-
-            <dif> 
-                <h3> Tinggi badan </h3>
-                <input type="number">
-            </dif>
-
-            <div>
-                <button>Hitung BMI</button>
-                <button> Reset </button>
             </div>
 
-        </form>
+            <div> 
+                <h3>Berat badan</h3>
+                <input type="number" id="input-wight">
+            </div>
 
+            <div> 
+                <h3>Tinggi badan</h3>
+                <input type="number">
+            </div>
+
+            <div class="form-btn-container"> 
+                <button class="button bg-cornsilk" type="button" onclick="formvalidate()">Hitung BMI</button>
+                <button class="button bg-cornsilk" type="reset">Reset</button>
+            </div>
+        </form>
     </main>
 
-    <footer> 
-
+    <footer>
     </footer> 
 
+    <script src="js/script.js"></script>
 </body>
 </html>
