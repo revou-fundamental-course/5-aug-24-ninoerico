@@ -6,16 +6,17 @@
   <title>BMI Calculator</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
- 
+
 <body>
-    <header> 
+    <header>
         <h1>Kalkulator BMI</h1>
     </header>
 
-    <main>    
+    <main>
         <p>Kalkulator BMI adalah alat yang digunakan untuk menghitung Body Mass Index (BMI) atau Indeks Massa Tubuh. <br>
         BMI adalah angka yang menunjukkan apakah berat badan seseorang termasuk dalam kategori sehat, kurang, atau berlebihan berdasarkan tinggi badannya.</p>
-        <form>
+        
+        <form id="bmiForm">
             <div>
                 <h3>Jenis Kelamin</h3>
                 <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki">
@@ -24,25 +25,38 @@
                 <label for="perempuan">Perempuan</label>
             </div>
 
-            <div> 
+            <div>
                 <h3>Berat badan</h3>
-                <input type="number" id="input-wight">
+                <input type="number" id="input-weight">
             </div>
 
-            <div> 
+            <div>
                 <h3>Tinggi badan</h3>
-                <input type="number">
+                <input type="number" id="input-height">
             </div>
 
-            <div class="form-btn-container"> 
+            <div class="form-btn-container">
                 <button class="button bg-cornsilk" type="button" onclick="formvalidate()">Hitung BMI</button>
                 <button class="button bg-cornsilk" type="reset">Reset</button>
             </div>
         </form>
+        
+        <form id="bmiResultForm">
+            <div>
+                <h3>Hasil BMI</h3>
+                <input type="text" id="bmi-result" readonly>
+            </div>
+
+            <div>
+                <h3>Kategori BMI</h3>
+                <input type="text" id="bmi-category" readonly>
+            </div>
+        </form>
+
     </main>
 
     <footer>
-    </footer> 
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

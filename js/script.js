@@ -1,8 +1,6 @@
-console.log('linked success');
-
 function formvalidate() {
-    let inputWeight = document.getElementById('input-wight').value;
-    let inputHeight = document.querySelector('input[type="number"]:nth-child(2)').value;
+    let inputWeight = document.getElementById('input-weight').value;
+    let inputHeight = document.getElementById('input-height').value;
     let gender = document.querySelector('input[name="jenis-kelamin"]:checked');
 
     // Validasi input
@@ -23,14 +21,17 @@ function formvalidate() {
         alert('Masukkan nilai berat dan tinggi badan yang valid.');
         return;
     }
-    let bmi = calculateBMI(inputWeight, inputHeight);
 
-    alert(`BMI Anda adalah ${bmi.toFixed(2)}. ${getBMICategory(bmi)}`);
+    let bmi = calculateBMI(inputWeight, inputHeight);
+    let category = getBMICategory(bmi);
+    document.getElementById('bmi-result').value = bmi.toFixed(2);
+    document.getElementById('bmi-category').value = category;
+
     console.log('form submitted');
 }
 
 function calculateBMI(weight, height) {
-    height = height / 100;
+    height = height / 100; // Mengubah tinggi dari cm ke meter
     return weight / (height * height);
 }
 
